@@ -1,21 +1,23 @@
-import React, { Component } from 'react';
-import PostContainer from './components/PostContainer'
-import dummyData from './dummy-data';
-import './App.css';
+import React, { Component } from "react";
+import PostContainer from "./components/PostContainer";
+import dummyData from "./dummy-data";
+import "./App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-     posts : dummyData
-    }
+      posts: dummyData
+    };
   }
   render() {
     return (
       <div className="App">
-      {this.state.posts.map(post => (
-        <PostContainer key={post.id} user={post}/>
-      ))}
+        {this.state.posts.map(post => (
+          <PostContainer key={post.id} user={post} />
+        ))}
+
+        
       </div>
     );
   }
