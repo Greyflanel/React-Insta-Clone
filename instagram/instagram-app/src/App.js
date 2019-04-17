@@ -14,10 +14,8 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.posts.map(post => (
-          <PostContainer key={post.id} user={post} />
-        ))}
-
-        
+          <PostContainer key={post.id} post={post} />
+        ))}  
       </div>
     );
   }
